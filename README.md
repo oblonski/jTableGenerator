@@ -54,5 +54,44 @@ The default column format is 'l | r | r'. You change it with
 
 <code>.withFormat("| c | c | c |");</code>
 
+##without code
+
+clone repository
+
+<code>cd jTableGenerator</code>
+
+<code>mvn package</code>
+
+<code>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in infile -out outfile -del delimiterInfile</code>
+
+Example
+
+infile scenario.txt
+<pre><code>scenario,time,distance
+ref,1000,12
+cordon,2000,123
+</code></pre>
+
+<code>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in scenario.txt -out latexTableScenario.txt -del ,</code>
+
+creates a file latexTableScenario.txt containing
+
+<pre><code>\begin{table}
+	\begin{center}
+		\caption{this is the first table}
+		\begin{tabular}{l | r | r}
+			\hline
+			scenario & time & distance \\
+			\hline
+			ref & 1000 & 12 \\
+			cordon & 2000 & 123 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{tab:first table}
+\end{table}
+</code></pre>
+
+
  
 
