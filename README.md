@@ -5,8 +5,8 @@ generates tables
 
 <pre><code>String columns = "scenario,time,distance";
 String row1 = "ref,1000,12";
-FluentLatexTableBuilder b = new FluentLatexTableBuilder();
-String table = b.withCaption("this is a latex table")
+FluentLatexTableBuilder table = new FluentLatexTableBuilder();
+String latexTable = table.withCaption("this is a latex table")
 	.withLabel("tab:latex table")
     .withColumns(Splitter.on(',').trimResults().split(columns))
     .withRow(Splitter.on(',').trimResults().split(row1))
@@ -14,7 +14,7 @@ String table = b.withCaption("this is a latex table")
     .build();
 </code></pre>
 
-which creates a String containing the latex tables pretty much like this
+which creates a String containing the latex table pretty much like this
 
 <pre><code>\begin{table}
 	\begin{center}
