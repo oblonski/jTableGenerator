@@ -21,8 +21,9 @@ or you can use Guava's Splitter to split entire rows
 
 <pre><code>String columns = "scenario,time,distance";
 String row1 = "ref,1000,12";
-FluentLatexTableBuilder table = new FluentLatexTableBuilder();
-String latexTable = table.withCaption("this is a latex table")
+
+String latexTable = new FluentLatexTableBuilder()
+	.withCaption("this is a latex table")
 	.withLabel("tab:latex table")
     .withColumns(Splitter.on(',').trimResults().split(columns))
     .withRow(Splitter.on(',').trimResults().split(row1))
