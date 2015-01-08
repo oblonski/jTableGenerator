@@ -1,14 +1,14 @@
 # jTableGenerator
 generates tables
 
-## Latex
+## LaTex
 
-Generating tables in Latex can be cumbersome, especially if you require large tables. The
-FluentLatexTableBuilder lets you create a standard latex table easily.
+Generating tables in LaTex can be cumbersome, especially if you require large tables. The
+FluentLatexTableBuilder lets you create a standard LaTex table easily.
 
 Example:
 
-<pre><code>String latexTable = new FluentLatexTableBuilder()
+<pre><code>String latexTable = new FluentLaTexTableBuilder()
 	.withCaption("this is a latex table")
 	.withLabel("tab:latex table")
     .withColumns(Arrays.asList("scenario","time","distance")
@@ -22,7 +22,7 @@ or you can use Guava's Splitter to split entire rows directly
 <pre><code>String columns = "scenario,time,distance";
 String row1 = "ref,1000,12";
 
-String latexTable = new FluentLatexTableBuilder()
+String latexTable = new FluentLaTexTableBuilder()
 	.withCaption("this is a latex table")
 	.withLabel("tab:latex table")
     .withColumns(Splitter.on(',').trimResults().split(columns))
@@ -31,7 +31,7 @@ String latexTable = new FluentLatexTableBuilder()
     .build();
 </code></pre>
 
-Both of the examples build a String containing the latex table pretty much like this
+Both of the examples build a String containing the LaTex table pretty much like this
 
 <pre><code>\begin{table}
 	\begin{center}

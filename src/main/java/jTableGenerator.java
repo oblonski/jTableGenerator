@@ -3,7 +3,7 @@ import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
 import com.google.common.base.Splitter;
-import latex.FluentLatexTableBuilder;
+import latex.FluentLaTexTableBuilder;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -58,7 +58,7 @@ public class jTableGenerator {
             return;
         }
         BufferedReader reader = new BufferedReader(new FileReader(new File(cmdArgs.inFile)));
-        FluentLatexTableBuilder table = new FluentLatexTableBuilder();
+        FluentLaTexTableBuilder table = new FluentLaTexTableBuilder();
         if(cmdArgs.caption != null) table.withCaption(cmdArgs.caption);
         if(cmdArgs.label != null) table.withLabel(cmdArgs.label);
         String line;
