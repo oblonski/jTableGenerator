@@ -52,7 +52,7 @@ Both of the examples build a String containing the latex table pretty much like 
 ###Format
 The default column format is 'l | r | r'. You change it with
 
-<code>new FluentLatexTableBuilder().withFormat("| c | c | c |").build();</code>
+<code>.withFormat("| c | c | c |");</code>
 
  
 
