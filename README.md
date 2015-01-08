@@ -3,6 +3,22 @@ generates tables
 
 ## Latex
 
+Generating tables in Latex can be cumbersome, especially if you require large tables. The
+FluentLatexTableBuilder lets you create a standard latex table easily.
+
+Example:
+
+<pre><code>String latexTable = new FluentLatexTableBuilder()
+	.withCaption("this is a latex table")
+	.withLabel("tab:latex table")
+    .withColumns(Arrays.asList("scenario","time","distance")
+    .withRow(Array.asList("ref","1000","12")
+    .withRow(Arrays.asList("cordon", "2000", "123"))
+    .build();
+</code></pre>
+
+or you can use Guava's Splitter to split entire rows
+
 <pre><code>String columns = "scenario,time,distance";
 String row1 = "ref,1000,12";
 FluentLatexTableBuilder table = new FluentLatexTableBuilder();
@@ -14,7 +30,7 @@ String latexTable = table.withCaption("this is a latex table")
     .build();
 </code></pre>
 
-which creates a String containing the latex table pretty much like this
+Both of the examples build a String containing the latex table pretty much like this
 
 <pre><code>\begin{table}
 	\begin{center}
