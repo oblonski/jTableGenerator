@@ -4,7 +4,7 @@ generates tables
 ## LaTex
 
 Generating tables in LaTex can be cumbersome. The
-FluentLatexTableBuilder lets you create a standard LaTex table easily.
+FluentLaTexTableBuilder lets you create a standard LaTex table easily.
 
 Example:
 
