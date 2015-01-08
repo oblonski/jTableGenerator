@@ -3,7 +3,7 @@ generates tables
 
 ## Latex
 
-Generating tables in Latex can be cumbersome, especially if you require large tables. The
+Generating tables in Latex can be cumbersome. The
 FluentLatexTableBuilder lets you create a standard latex table easily.
 
 Example:
