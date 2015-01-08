@@ -56,23 +56,23 @@ The default column format is 'l | r | r'. You change it with
 
 ##without code
 
-clone repository
+<kbd>git clone https://github.com/oblonski/jTableGenerator.git</kbd>
 
-<code>cd jTableGenerator</code>
+<kbd>cd jTableGenerator</kbd>
 
-<code>mvn package</code>
+<kbd>mvn package</kbd>
 
-<code>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in infile -out outfile -del delimiterInfile</code>
+<kbd>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in infile -out outfile -del delimiterInfile</kbd>
 
-Example
+Example:
 
-infile scenario.txt
+Assume an infile called scenario.txt which looks like this
 <pre><code>scenario,time,distance
 ref,1000,12
 cordon,2000,123
 </code></pre>
 
-<code>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in scenario.txt -out latexTableScenario.txt -del ,</code>
+<kbd>java -jar target/jTableGenerator-1.0-SNAPSHOT.jar -in scenario.txt -out latexTableScenario.txt -del ,</kbd>
 
 creates a file latexTableScenario.txt containing
 
