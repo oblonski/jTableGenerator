@@ -17,7 +17,7 @@ Example:
     .build();
 </code></pre>
 
-or you can use Guava's Splitter to split entire rows
+or you can use Guava's Splitter to split entire rows directly
 
 <pre><code>String columns = "scenario,time,distance";
 String row1 = "ref,1000,12";
