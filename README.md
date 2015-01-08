@@ -48,3 +48,11 @@ Both of the examples build a String containing the latex table pretty much like 
 	\label{tab:first table}
 \end{table}
 </code></pre>
+
+###Format
+The default column format is 'l | r | r'. You change it with
+
+<code>new FluentLatexTableBuilder().withFormat("| c | c | c |").build();</code>
+
+ 
+
